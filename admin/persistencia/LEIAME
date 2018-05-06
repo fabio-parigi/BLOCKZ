@@ -1,0 +1,34 @@
+Atenção
+
+Forma de funcionamento em níveis:
+
+Modelo: 
+			Classes baseada nas tabelas do banco, usadas para inserssão de novos elementos. (Não são usadas pra listagem)
+
+Persistencia: 
+			Detém todas as querys para mandar ao Modelo(Modelador) do Banco ~ persistencia. São as classes mais próximas ao banco.
+
+Controlador: 
+			Centraliza os métodos relacionados a determinada funcionalidade (Caso de Uso), pode parecer repetitivo, mas é organizado 
+			e funciona. São instanciadas sempre que algo relacionado a o que generalizam precisam ser invocados. Podem ser constantes 
+			ou muito próximo a isso.
+
+paginas_metronic: HTML+CSS+PHP+JScript
+
+As camadas se comunicam diretamente com a próxima mais a baixo.
+
+- [Páginas________] - Especializada
+- [Controladores__]
+- [Modelos________] * Essa não é uma camada do MVC, ela pode ser omitida em alguns casos.
+- [Persistencia___] + Especializada
+- [Banco_de_Dados_]
+
+Tipos de acesso
+
+Entenda ~
+			Cadastrar seria: Cadastrar/Alterar/Excluir.
+			Ele pode apenas se alterar.
+
+- Administrador	- Nível 0 - Acesso Total
+- Secretário	- Nível 1 - Acesso Intermediário. (Pode cadastrar pessoas na secretaria onde ele está). Pode postar e excluir qualquer post.
+- Colaborador	- Nível 2 - Não pode cadastrar ninguém. Pode postar e excluir apenas os posts dele.
